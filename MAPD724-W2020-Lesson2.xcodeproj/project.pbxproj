@@ -21,6 +21,8 @@
 		E98998AF23CFEDD400D7CBD3 /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98998AE23CFEDD400D7CBD3 /* GameProtocol.swift */; };
 		E98998B123CFEE4C00D7CBD3 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98998B023CFEE4C00D7CBD3 /* GameObject.swift */; };
 		E98998B323CFF20200D7CBD3 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98998B223CFF20200D7CBD3 /* Plane.swift */; };
+		E98998B523CFFC4B00D7CBD3 /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98998B423CFFC4B00D7CBD3 /* Island.swift */; };
+		E98998B723D00ABF00D7CBD3 /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98998B623D00ABF00D7CBD3 /* Cloud.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		E98998AE23CFEDD400D7CBD3 /* GameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProtocol.swift; sourceTree = "<group>"; };
 		E98998B023CFEE4C00D7CBD3 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		E98998B223CFF20200D7CBD3 /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
+		E98998B423CFFC4B00D7CBD3 /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
+		E98998B623D00ABF00D7CBD3 /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 				E98998AE23CFEDD400D7CBD3 /* GameProtocol.swift */,
 				E98998B023CFEE4C00D7CBD3 /* GameObject.swift */,
 				E98998B223CFF20200D7CBD3 /* Plane.swift */,
+				E98998B423CFFC4B00D7CBD3 /* Island.swift */,
+				E98998B623D00ABF00D7CBD3 /* Cloud.swift */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -196,7 +202,9 @@
 				E989989323CFDE4300D7CBD3 /* GameScene.swift in Sources */,
 				E98998AF23CFEDD400D7CBD3 /* GameProtocol.swift in Sources */,
 				E989989523CFDE4300D7CBD3 /* GameViewController.swift in Sources */,
+				E98998B523CFFC4B00D7CBD3 /* Island.swift in Sources */,
 				E989988D23CFDE4300D7CBD3 /* AppDelegate.swift in Sources */,
+				E98998B723D00ABF00D7CBD3 /* Cloud.swift in Sources */,
 				E98998B323CFF20200D7CBD3 /* Plane.swift in Sources */,
 				E98998B123CFEE4C00D7CBD3 /* GameObject.swift in Sources */,
 			);

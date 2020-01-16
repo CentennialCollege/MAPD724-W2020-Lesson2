@@ -1,20 +1,31 @@
 import SpriteKit
+import GameplayKit
 
-class Plane: GameObject
+class Island: GameObject
 {
-    // constructor
+    
+    
+    //constructor
     init()
     {
-        super.init(imageString: "plane", initialScale: 2.0)
+        super.init(imageString: "island", initialScale: 2.0)
         Start()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder)
+    {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // Life Cycle Functions
     override func CheckBounds()
     {
+        // bottom boundary
+        if(self.position.y < -715)
+        {
+            self.Reset()
+        }
+        
         // right boundary
         if(self.position.x >= 307 - self.halfWidth!)
         {
@@ -28,23 +39,28 @@ class Plane: GameObject
         }
     }
     
+    func Move()
+    {
+        self.position.y -= self.dy!
+    }
+    
     override func Reset()
     {
-        
+        self.position.y = 715
+        let randomX:Int = (randomSource?.nextInt(upperBound: 614))! - 307
+        self.position.x = CGFloat(randomX)
     }
     
     override func Start()
     {
-        self.zPosition = 2
+        self.zPosition = 1
+        self.Reset()
+        self.dy = 5.0
     }
     
     override func Update()
     {
+        self.Move()
         self.CheckBounds()
-    }
-    
-    func TouchMove(newPos: CGPoint)
-    {
-        self.position = newPos
     }
 }
