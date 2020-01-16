@@ -15,6 +15,12 @@
 		E989989823CFDE4300D7CBD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E989989623CFDE4300D7CBD3 /* Main.storyboard */; };
 		E989989A23CFDE4600D7CBD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E989989923CFDE4600D7CBD3 /* Assets.xcassets */; };
 		E989989D23CFDE4600D7CBD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E989989B23CFDE4600D7CBD3 /* LaunchScreen.storyboard */; };
+		E98998A823CFE41500D7CBD3 /* thunder.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E98998A523CFE41500D7CBD3 /* thunder.mp3 */; };
+		E98998A923CFE41500D7CBD3 /* engine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E98998A623CFE41500D7CBD3 /* engine.mp3 */; };
+		E98998AA23CFE41500D7CBD3 /* yay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E98998A723CFE41500D7CBD3 /* yay.mp3 */; };
+		E98998AF23CFEDD400D7CBD3 /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98998AE23CFEDD400D7CBD3 /* GameProtocol.swift */; };
+		E98998B123CFEE4C00D7CBD3 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98998B023CFEE4C00D7CBD3 /* GameObject.swift */; };
+		E98998B323CFF20200D7CBD3 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98998B223CFF20200D7CBD3 /* Plane.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,13 @@
 		E989989923CFDE4600D7CBD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E989989C23CFDE4600D7CBD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E989989E23CFDE4600D7CBD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E98998A523CFE41500D7CBD3 /* thunder.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = thunder.mp3; sourceTree = "<group>"; };
+		E98998A623CFE41500D7CBD3 /* engine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = engine.mp3; sourceTree = "<group>"; };
+		E98998A723CFE41500D7CBD3 /* yay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yay.mp3; sourceTree = "<group>"; };
+		E98998AC23CFE47F00D7CBD3 /* Dock51.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dock51.ttf; sourceTree = "<group>"; };
+		E98998AE23CFEDD400D7CBD3 /* GameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProtocol.swift; sourceTree = "<group>"; };
+		E98998B023CFEE4C00D7CBD3 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
+		E98998B223CFF20200D7CBD3 /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +73,9 @@
 		E989988B23CFDE4300D7CBD3 /* MAPD724-W2020-Lesson2 */ = {
 			isa = PBXGroup;
 			children = (
+				E98998AD23CFE64E00D7CBD3 /* Objects */,
+				E98998AB23CFE47000D7CBD3 /* Fonts */,
+				E98998A423CFE3E600D7CBD3 /* Audio Assets */,
 				E989988C23CFDE4300D7CBD3 /* AppDelegate.swift */,
 				E989988E23CFDE4300D7CBD3 /* GameScene.sks */,
 				E989989023CFDE4300D7CBD3 /* Actions.sks */,
@@ -71,6 +87,34 @@
 				E989989E23CFDE4600D7CBD3 /* Info.plist */,
 			);
 			path = "MAPD724-W2020-Lesson2";
+			sourceTree = "<group>";
+		};
+		E98998A423CFE3E600D7CBD3 /* Audio Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E98998A623CFE41500D7CBD3 /* engine.mp3 */,
+				E98998A523CFE41500D7CBD3 /* thunder.mp3 */,
+				E98998A723CFE41500D7CBD3 /* yay.mp3 */,
+			);
+			name = "Audio Assets";
+			sourceTree = "<group>";
+		};
+		E98998AB23CFE47000D7CBD3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E98998AC23CFE47F00D7CBD3 /* Dock51.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		E98998AD23CFE64E00D7CBD3 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				E98998AE23CFEDD400D7CBD3 /* GameProtocol.swift */,
+				E98998B023CFEE4C00D7CBD3 /* GameObject.swift */,
+				E98998B223CFF20200D7CBD3 /* Plane.swift */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,11 +175,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E98998AA23CFE41500D7CBD3 /* yay.mp3 in Resources */,
 				E989989823CFDE4300D7CBD3 /* Main.storyboard in Resources */,
 				E989988F23CFDE4300D7CBD3 /* GameScene.sks in Resources */,
+				E98998A923CFE41500D7CBD3 /* engine.mp3 in Resources */,
 				E989989A23CFDE4600D7CBD3 /* Assets.xcassets in Resources */,
 				E989989D23CFDE4600D7CBD3 /* LaunchScreen.storyboard in Resources */,
 				E989989123CFDE4300D7CBD3 /* Actions.sks in Resources */,
+				E98998A823CFE41500D7CBD3 /* thunder.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,8 +194,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E989989323CFDE4300D7CBD3 /* GameScene.swift in Sources */,
+				E98998AF23CFEDD400D7CBD3 /* GameProtocol.swift in Sources */,
 				E989989523CFDE4300D7CBD3 /* GameViewController.swift in Sources */,
 				E989988D23CFDE4300D7CBD3 /* AppDelegate.swift in Sources */,
+				E98998B323CFF20200D7CBD3 /* Plane.swift in Sources */,
+				E98998B123CFEE4C00D7CBD3 /* GameObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +352,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.centennialcollege.MAPD724-W2020-Lesson2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,7 +370,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.centennialcollege.MAPD724-W2020-Lesson2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
