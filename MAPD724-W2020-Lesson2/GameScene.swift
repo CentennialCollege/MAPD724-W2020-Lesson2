@@ -10,6 +10,8 @@ var screenHeight: CGFloat?
 
 class GameScene: SKScene {
     
+    var oceanSprite1: Ocean?
+    var oceanSprite2: Ocean?
     var planeSprite: Plane?
     var islandSprite: Island?
     var cloudSprites: [Cloud] = []
@@ -20,10 +22,19 @@ class GameScene: SKScene {
         screenWidth = frame.width
         screenHeight = frame.height
         
+        // add ocean
+        self.oceanSprite1 = Ocean()
+        self.oceanSprite1?.position = CGPoint(x: 0, y: 1864.67)
+        self.addChild(oceanSprite1!)
+        
+        self.oceanSprite2 = Ocean()
+        self.oceanSprite2?.position = CGPoint(x: 0, y: 177)
+        self.addChild(oceanSprite2!)
+        
         // add plane
         self.planeSprite = Plane()
         self.planeSprite?.position = CGPoint(x: 0, y: -575)
-        self.addChild(self.planeSprite!)
+        self.addChild(planeSprite!)
         
         // add island
         self.islandSprite = Island()
@@ -76,6 +87,9 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval)
     {
+        self.oceanSprite1?.Update()
+        self.oceanSprite2?.Update()
+        
         self.planeSprite?.Update()
         self.islandSprite?.Update()
         

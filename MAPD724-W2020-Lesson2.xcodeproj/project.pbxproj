@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9687B2A23D9275000C81980 /* Ocean.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9687B2923D9275000C81980 /* Ocean.swift */; };
 		E989988D23CFDE4300D7CBD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E989988C23CFDE4300D7CBD3 /* AppDelegate.swift */; };
 		E989988F23CFDE4300D7CBD3 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E989988E23CFDE4300D7CBD3 /* GameScene.sks */; };
 		E989989123CFDE4300D7CBD3 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = E989989023CFDE4300D7CBD3 /* Actions.sks */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E9687B2923D9275000C81980 /* Ocean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ocean.swift; sourceTree = "<group>"; };
 		E989988923CFDE4300D7CBD3 /* MAPD724-W2020-Lesson2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MAPD724-W2020-Lesson2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E989988C23CFDE4300D7CBD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E989988E23CFDE4300D7CBD3 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				E98998B223CFF20200D7CBD3 /* Plane.swift */,
 				E98998B423CFFC4B00D7CBD3 /* Island.swift */,
 				E98998B623D00ABF00D7CBD3 /* Cloud.swift */,
+				E9687B2923D9275000C81980 /* Ocean.swift */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				E98998AF23CFEDD400D7CBD3 /* GameProtocol.swift in Sources */,
 				E989989523CFDE4300D7CBD3 /* GameViewController.swift in Sources */,
 				E98998B523CFFC4B00D7CBD3 /* Island.swift in Sources */,
+				E9687B2A23D9275000C81980 /* Ocean.swift in Sources */,
 				E989988D23CFDE4300D7CBD3 /* AppDelegate.swift in Sources */,
 				E98998B723D00ABF00D7CBD3 /* Cloud.swift in Sources */,
 				E98998B323CFF20200D7CBD3 /* Plane.swift in Sources */,
