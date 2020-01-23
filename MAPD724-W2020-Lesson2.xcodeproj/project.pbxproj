@@ -10,8 +10,6 @@
 		E9687B2A23D9275000C81980 /* Ocean.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9687B2923D9275000C81980 /* Ocean.swift */; };
 		E9687B2D23D93B3900C81980 /* StartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E9687B2C23D93B3900C81980 /* StartScene.sks */; };
 		E9687B2F23D93B8E00C81980 /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9687B2E23D93B8E00C81980 /* StartScene.swift */; };
-		E9687B3123D93EAE00C81980 /* SceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9687B3023D93EAE00C81980 /* SceneState.swift */; };
-		E9687B3323D940AF00C81980 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9687B3223D940AF00C81980 /* Scene.swift */; };
 		E9687B3523D94A5600C81980 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9687B3423D94A5600C81980 /* GameManager.swift */; };
 		E9687B3723D94E6B00C81980 /* EndScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9687B3623D94E6B00C81980 /* EndScene.swift */; };
 		E9687B3923D94F8300C81980 /* EndScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E9687B3823D94F8300C81980 /* EndScene.sks */; };
@@ -37,8 +35,6 @@
 		E9687B2923D9275000C81980 /* Ocean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ocean.swift; sourceTree = "<group>"; };
 		E9687B2C23D93B3900C81980 /* StartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScene.sks; sourceTree = "<group>"; };
 		E9687B2E23D93B8E00C81980 /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
-		E9687B3023D93EAE00C81980 /* SceneState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneState.swift; sourceTree = "<group>"; };
-		E9687B3223D940AF00C81980 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		E9687B3423D94A5600C81980 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		E9687B3623D94E6B00C81980 /* EndScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndScene.swift; sourceTree = "<group>"; };
 		E9687B3823D94F8300C81980 /* EndScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EndScene.sks; sourceTree = "<group>"; };
@@ -81,7 +77,6 @@
 				E989989223CFDE4300D7CBD3 /* GameScene.swift */,
 				E9687B2C23D93B3900C81980 /* StartScene.sks */,
 				E9687B2E23D93B8E00C81980 /* StartScene.swift */,
-				E9687B3023D93EAE00C81980 /* SceneState.swift */,
 				E9687B3623D94E6B00C81980 /* EndScene.swift */,
 				E9687B3823D94F8300C81980 /* EndScene.sks */,
 			);
@@ -145,12 +140,11 @@
 			children = (
 				E98998AE23CFEDD400D7CBD3 /* GameProtocol.swift */,
 				E98998B023CFEE4C00D7CBD3 /* GameObject.swift */,
+				E9687B3423D94A5600C81980 /* GameManager.swift */,
 				E98998B223CFF20200D7CBD3 /* Plane.swift */,
 				E98998B423CFFC4B00D7CBD3 /* Island.swift */,
 				E98998B623D00ABF00D7CBD3 /* Cloud.swift */,
 				E9687B2923D9275000C81980 /* Ocean.swift */,
-				E9687B3223D940AF00C81980 /* Scene.swift */,
-				E9687B3423D94A5600C81980 /* GameManager.swift */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -233,7 +227,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9687B3123D93EAE00C81980 /* SceneState.swift in Sources */,
 				E989989323CFDE4300D7CBD3 /* GameScene.swift in Sources */,
 				E98998AF23CFEDD400D7CBD3 /* GameProtocol.swift in Sources */,
 				E989989523CFDE4300D7CBD3 /* GameViewController.swift in Sources */,
@@ -243,7 +236,6 @@
 				E9687B2A23D9275000C81980 /* Ocean.swift in Sources */,
 				E9687B3723D94E6B00C81980 /* EndScene.swift in Sources */,
 				E989988D23CFDE4300D7CBD3 /* AppDelegate.swift in Sources */,
-				E9687B3323D940AF00C81980 /* Scene.swift in Sources */,
 				E98998B723D00ABF00D7CBD3 /* Cloud.swift in Sources */,
 				E98998B323CFF20200D7CBD3 /* Plane.swift in Sources */,
 				E98998B123CFEE4C00D7CBD3 /* GameObject.swift in Sources */,
