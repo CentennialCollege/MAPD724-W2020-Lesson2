@@ -10,29 +10,23 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, GameManager {
+    
+    
 
+    @IBOutlet weak var StartButtonOutlet: UIButton!
+    
+    @IBOutlet weak var BackButtonOutlet: UIButton!
+    
+    
+    var currentScene: SKScene?
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        if let view = self.view as! SKView?
-        {
-            // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene")
-            {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                
-                // Present the scene
-                view.presentScene(scene)
-            }
-            
-            view.ignoresSiblingOrder = true
-            
-            view.showsFPS = true
-            view.showsNodeCount = true
-        }
+        BackButtonOutlet.isHidden = true
+        SetScene(sceneName: "StartScene")
     }
 
     override var shouldAutorotate: Bool {
@@ -50,4 +44,53 @@ class GameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    func SetScene(sceneName: String)
+    {
+        if let view = self.view as! SKView?
+        {
+            // Load the SKScene from 'GameScene.sks'
+            currentScene = SKScene(fileNamed: sceneName)
+            
+            if let gameScene = currentScene as? GameScene
+            {
+                gameScene.gameManager = self
+            }
+            
+            // Set the scale mode to scale to fit the window
+            currentScene?.scaleMode = .aspectFill
+                
+            // Present the scene
+            view.presentScene(currentScene)
+            
+            
+            view.ignoresSiblingOrder = true
+        
+        }
+    }
+    
+    func PresentStartScene() {
+        StartButtonOutlet.isHidden = false
+    }
+    
+    func PresentEndScene() {
+        BackButtonOutlet.isHidden = false
+        SetScene(sceneName: "EndScene")
+    }
+    
+    
+    @IBAction func StartButton_Press(_ sender: Any)
+    {
+        StartButtonOutlet.isHidden = true
+        SetScene(sceneName: "GameScene")
+        
+    }
+    
+    @IBAction func BackButton_Press(_ sender: Any)
+    {
+        BackButtonOutlet.isHidden = true
+        SetScene(sceneName: "GameScene")
+    }
+    
+    
 }
