@@ -56,6 +56,24 @@ class GameScene: SKScene {
             cloudSprites.append(cloud)
             self.addChild(cloudSprites[index])
         }
+        
+        let engineSound = SKAudioNode(fileNamed: "engine.mp3")
+        self.addChild(engineSound)
+        engineSound.autoplayLooped = true
+        
+        // preload sounds
+        do {
+            let sounds:[String] = ["thunder", "yay"]
+            for sound in sounds
+            {
+                let path: String = Bundle.main.path(forResource: sound, ofType: "mp3")!
+                let url: URL = URL(fileURLWithPath: path)
+                let player: AVAudioPlayer = try AVAudioPlayer(contentsOf: url)
+                player.prepareToPlay()
+            }
+        } catch {
+        }
+        
     }
     
     func touchDown(atPoint pos : CGPoint)
@@ -76,10 +94,6 @@ class GameScene: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     {
         for t in touches { self.touchDown(atPoint: t.location(in: self))}
-        
-        //self.gameManager?.PresentEndScene()
-    
-        
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?)
@@ -106,12 +120,17 @@ class GameScene: SKScene {
         self.planeSprite?.Update()
         self.islandSprite?.Update()
         
-        CollisionManager.squaredRadiusCheck(object1: planeSprite!, object2: islandSprite!)
+        CollisionManager.squaredRadiusCheck(scene: self, object1: planeSprite!, object2: islandSprite!)
         
         for cloud in cloudSprites
         {
             cloud.Update()
-            CollisionManager.squaredRadiusCheck(object1: planeSprite!, object2: cloud)
+            CollisionManager.squaredRadiusCheck(scene: self, object1: planeSprite!, object2: cloud)
+        }
+        
+        if(ScoreManager.Lives < 1)
+        {
+            self.gameManager?.PresentEndScene()
         }
     }
 }
