@@ -77,7 +77,7 @@ class GameScene: SKScene {
     {
         for t in touches { self.touchDown(atPoint: t.location(in: self))}
         
-        self.gameManager?.PresentEndScene()
+        //self.gameManager?.PresentEndScene()
     
         
     }
@@ -106,9 +106,12 @@ class GameScene: SKScene {
         self.planeSprite?.Update()
         self.islandSprite?.Update()
         
+        CollisionManager.squaredRadiusCheck(object1: planeSprite!, object2: islandSprite!)
+        
         for cloud in cloudSprites
         {
             cloud.Update()
+            CollisionManager.squaredRadiusCheck(object1: planeSprite!, object2: cloud)
         }
     }
 }

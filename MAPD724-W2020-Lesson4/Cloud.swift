@@ -1,14 +1,14 @@
 import SpriteKit
 import GameplayKit
 
-class Island: GameObject
+class Cloud: GameObject
 {
     
     
     //constructor
     init()
     {
-        super.init(imageString: "island", initialScale: 2.0)
+        super.init(imageString: "cloud", initialScale: 1.5)
         Start()
     }
     
@@ -21,41 +21,34 @@ class Island: GameObject
     override func CheckBounds()
     {
         // bottom boundary
-        if(self.position.y < -715)
+        if(self.position.y < -801)
         {
             self.Reset()
         }
         
-        // right boundary
-        if(self.position.x >= 307 - self.halfWidth!)
-        {
-            self.position.x = 307 - self.halfWidth!
-        }
-        
-        // left boundary
-        if(self.position.x <= -307 + self.halfWidth!)
-        {
-            self.position.x = -307 + self.halfWidth!
-        }
     }
     
     func Move()
     {
         self.position.y -= self.dy!
+        self.position.x -= self.dx!
     }
     
     override func Reset()
     {
-        self.position.y = 715
+        self.position.y = 801
         let randomX:Int = (randomSource?.nextInt(upperBound: 614))! - 307
         self.position.x = CGFloat(randomX)
+        self.dy = CGFloat((randomSource?.nextUniform())! * 5.0) + 5.0
+        self.dx = CGFloat((randomSource?.nextUniform())! * -4.0) + 2.0
+        self.isColliding = false
     }
     
     override func Start()
     {
-        self.zPosition = 1
+        self.zPosition = 3
         self.Reset()
-        self.dy = 5.0
+        self.alpha = 0.5
     }
     
     override func Update()
@@ -63,4 +56,6 @@ class Island: GameObject
         self.Move()
         self.CheckBounds()
     }
+    
+    
 }
